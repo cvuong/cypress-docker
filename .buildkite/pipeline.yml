@@ -1,17 +1,3 @@
 steps:
-  # Prebuild the app image, upload it to a registry for later steps
-  - label: ":docker: Build"
-    plugins:
-      - docker-compose#v1.0.0:
-          build: app
-          image-repository: index.docker.io/org/repo
-
-  - wait
-
-  # Use the app image built above to run concurrent tests
-  - label: ":docker: Test %n"
-    command: test.sh
-    parallelism: 25
-    plugins:
-      - docker-compose#v1.0.0:
-          run: app
+  - label: Example Test
+    command: echo "Hello!"
