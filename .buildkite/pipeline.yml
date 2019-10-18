@@ -1,9 +1,9 @@
 steps:
   - name: "Run Docker Compose"
-    command: test.sh
     plugins:
       - docker-compose#v3.0.3:
-          run: app
+          run: up
+
   # Prebuild the app image, upload it to a registry for later steps
   # - label: ":docker: Build"
   #   plugins:
