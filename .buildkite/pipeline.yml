@@ -2,7 +2,7 @@ steps:
   - name: "Run Docker Compose"
     plugins:
       - docker-compose#v3.0.3:
-          run: up
+          run: cypress
 
   # Prebuild the app image, upload it to a registry for later steps
   # - label: ":docker: Build"
