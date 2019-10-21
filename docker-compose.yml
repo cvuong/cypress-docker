@@ -1,10 +1,16 @@
 version: '3.2'
 services:
   cypress:
-    image: "cypress/included:3.2.0"
+    image: "cypress/base:8"
     environment:
       - CYPRESS_baseUrl=https://www.google.com
     working_dir: /e2e
     volumes:
       - ./:/e2e
+    command: "./run_cypress.sh"
+  # cypress-tests:
+  #   build: .
+  #   depends_on:
+  #     - cypress
+  #   command: "./run_cypress.sh"
 
