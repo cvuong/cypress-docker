@@ -1,4 +1,4 @@
-describe('test suite', () => {
+describe('test suite 3', () => {
   const xhrData = [];
 
   after(() => {
